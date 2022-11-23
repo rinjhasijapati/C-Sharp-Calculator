@@ -123,7 +123,13 @@ namespace calculator
         private void button16_Click(object sender, EventArgs e)
         {
             string data = textBox1.Text;
-            textBox1.Text = data + "( )";
+            if (data.Contains("(")){
+                textBox1.Text = data + ")";
+            }
+            else
+            {
+                textBox1.Text = "(" + data;
+            }
         }
 
         private void button20_Click(object sender, EventArgs e)
